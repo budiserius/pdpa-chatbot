@@ -1,10 +1,11 @@
 # PDPA Chatbot
 
 Personal Data Protection Act Chatbot
+![Preview](assets/preview.png)
 
-## Latar Belakang
+## Background
 
-Kesadaran akan perlindungan data pribadi masyarakat indonesia masih tinggi. Banyak orang belum mengetahui batasan batasan ataupun regulasi yang ada terkait hal ini. Hal tersebut menyebabkan beberapa pelanggaran penggunaan data pribadi yang cukup serius. Dengan adanya bot ini, diharapkan dapat memfasilitasi orang orang yang curious dan dapat meningkatkan awareness terkait perlindungan data pribadi.
+Public awareness of personal data protection in Indonesia remains relatively low. Many people are still unaware of the boundaries and existing regulations related to this issue. This lack of understanding has led to several serious violations in the use of personal data. With the presence of this bot, it is expected to facilitate curious individuals and help increase awareness regarding personal data protection.
 
 ## Tech Stack
 

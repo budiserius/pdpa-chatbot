@@ -81,7 +81,7 @@ st.markdown("""
         pointer-events: none;
     }
     </style>
-    <div class="watermark">Built by Muhammad Budi Setiawan</div>
+    <div class="watermark">@2026 Muhammad Budi Setiawan</div>
     """, unsafe_allow_html=True)
 
 # 4. Main UI
