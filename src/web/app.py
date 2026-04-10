@@ -12,8 +12,12 @@ st.title("🇮🇩 PDPA Knowledge Bot (Local Data)")
 
 if "pdpa_chain" not in st.session_state:
     # api_key = os.getenv("GOOGLE_API_KEY")
-    api_key = "AIzaSyBd1uYoF7NgvBVLDrtW3xp1bGsv8-L2fHk"
-    # api_key = "AIzaSyAiwGLzoUjuNrDNVRqnCFI74UxIqjcecvo"
+    api_key = os.getenv("GROQ_API_KEY")
+
+    if not api_key:
+        st.error("GROK_API_KEY tidak ditemukan di .env!")
+        st.stop()
+
     st.session_state.pdpa_chain = PDPAChain(api_key).get_chain()
 
 if "messages" not in st.session_state:
@@ -29,6 +33,6 @@ if prompt := st.chat_input("Tanyakan tentang UU PDP..."):
         st.markdown(prompt)
 
     with st.chat_message("assistant"):
-        response = st.session_state.pdpa_chain.invoke(prompt)
+        response = st.session_state.pdpa_chain.invoke({"query": prompt})
         st.markdown(response["result"])
         st.session_state.messages.append({"role": "assistant", "content": response["result"]})
